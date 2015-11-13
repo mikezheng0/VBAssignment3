@@ -22,7 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.mnuMainMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,19 +46,19 @@ Partial Class frmMain
         Me.lblClientTypeDiscountStatic = New System.Windows.Forms.Label()
         Me.lblTotalPrice = New System.Windows.Forms.Label()
         Me.lblTotalPriceStatic = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.mnuMainMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'mnuMainMenuStrip
         '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.HelpToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(739, 28)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.mnuMainMenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.mnuMainMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.mnuMainMenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.mnuMainMenuStrip.Name = "mnuMainMenuStrip"
+        Me.mnuMainMenuStrip.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.mnuMainMenuStrip.Size = New System.Drawing.Size(739, 28)
+        Me.mnuMainMenuStrip.TabIndex = 0
+        Me.mnuMainMenuStrip.Text = "MainMenuStrip"
         '
         'FileToolStripMenuItem
         '
@@ -108,7 +108,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'lstHairAndServices
@@ -283,18 +283,18 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblPriceStatic)
         Me.Controls.Add(Me.lstPrice)
         Me.Controls.Add(Me.lstHairAndServices)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Controls.Add(Me.mnuMainMenuStrip)
+        Me.MainMenuStrip = Me.mnuMainMenuStrip
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmMain"
         Me.Text = "Perfect Hair Salon"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.mnuMainMenuStrip.ResumeLayout(False)
+        Me.mnuMainMenuStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents mnuMainMenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ResetToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

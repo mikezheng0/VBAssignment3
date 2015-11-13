@@ -77,6 +77,12 @@
       <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSalonDiscount.Designer.vb">
+      <DependentUpon>frmSalonDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalonDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSelectionMenu.Designer.vb">
       <DependentUpon>frmSelectionMenu.vb</DependentUpon>
     </Compile>
@@ -104,10 +110,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PriceCalcModule.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalonDiscount.resx">
+      <DependentUpon>frmSalonDiscount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectionMenu.resx">
       <DependentUpon>frmSelectionMenu.vb</DependentUpon>

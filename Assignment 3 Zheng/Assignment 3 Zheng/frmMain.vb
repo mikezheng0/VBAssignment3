@@ -9,4 +9,9 @@
         Dim frmServiceBox As New frmServiceSelection()
         frmServiceBox.ShowDialog()
     End Sub
+
+    Private Sub ApplyDiscountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyDiscountsToolStripMenuItem.Click
+        Dim frmDiscountBox As New frmSalonDiscount()
+        frmDiscountBox.ShowDialog()
+    End Sub
 End Class
