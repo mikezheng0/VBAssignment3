@@ -1,0 +1,10 @@
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\bin\Debug\Assignment 3 Zheng.exe.config
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\bin\Debug\Assignment 3 Zheng.exe
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\bin\Debug\Assignment 3 Zheng.pdb
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\bin\Debug\Assignment 3 Zheng.xml
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment_3_Zheng.frmMain.resources
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment_3_Zheng.Resources.resources
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.vbproj.GenerateResource.Cache
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.exe
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.xml
+c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.pdb
