@@ -8,3 +8,7 @@ c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignme
 c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.exe
 c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.xml
 c:\users\mike_\documents\visual studio 2013\Projects\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.pdb
+C:\Users\student.user\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\bin\Debug\Assignment 3 Zheng.exe.config
+C:\Users\student.user\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.exe
+C:\Users\student.user\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.xml
+C:\Users\student.user\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.pdb
