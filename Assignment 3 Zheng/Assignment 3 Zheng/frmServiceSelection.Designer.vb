@@ -31,29 +31,30 @@ Partial Class frmServiceSelection
         'lblSelectService
         '
         Me.lblSelectService.AutoSize = True
-        Me.lblSelectService.Location = New System.Drawing.Point(12, 9)
+        Me.lblSelectService.Location = New System.Drawing.Point(9, 7)
+        Me.lblSelectService.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSelectService.Name = "lblSelectService"
-        Me.lblSelectService.Size = New System.Drawing.Size(98, 17)
+        Me.lblSelectService.Size = New System.Drawing.Size(76, 13)
         Me.lblSelectService.TabIndex = 12
         Me.lblSelectService.Text = "Select Service"
         '
         'btnCloseService
         '
-        Me.btnCloseService.Location = New System.Drawing.Point(218, 365)
-        Me.btnCloseService.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCloseService.Location = New System.Drawing.Point(164, 297)
+        Me.btnCloseService.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCloseService.Name = "btnCloseService"
-        Me.btnCloseService.Size = New System.Drawing.Size(181, 85)
+        Me.btnCloseService.Size = New System.Drawing.Size(136, 69)
         Me.btnCloseService.TabIndex = 11
         Me.btnCloseService.Text = "Close"
         Me.btnCloseService.UseVisualStyleBackColor = True
         '
         'btnAddService
         '
-        Me.btnAddService.Location = New System.Drawing.Point(13, 365)
-        Me.btnAddService.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAddService.Location = New System.Drawing.Point(10, 297)
+        Me.btnAddService.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAddService.Name = "btnAddService"
         Me.btnAddService.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnAddService.Size = New System.Drawing.Size(176, 85)
+        Me.btnAddService.Size = New System.Drawing.Size(132, 69)
         Me.btnAddService.TabIndex = 10
         Me.btnAddService.Text = "Add Service"
         Me.btnAddService.UseVisualStyleBackColor = True
@@ -61,22 +62,21 @@ Partial Class frmServiceSelection
         'lblServices
         '
         Me.lblServices.FormattingEnabled = True
-        Me.lblServices.ItemHeight = 16
-        Me.lblServices.Location = New System.Drawing.Point(13, 30)
-        Me.lblServices.Margin = New System.Windows.Forms.Padding(4)
+        Me.lblServices.Location = New System.Drawing.Point(10, 24)
         Me.lblServices.Name = "lblServices"
-        Me.lblServices.Size = New System.Drawing.Size(385, 308)
+        Me.lblServices.Size = New System.Drawing.Size(290, 251)
         Me.lblServices.TabIndex = 9
         '
         'frmServiceSelection
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 466)
+        Me.ClientSize = New System.Drawing.Size(310, 379)
         Me.Controls.Add(Me.lblSelectService)
         Me.Controls.Add(Me.btnCloseService)
         Me.Controls.Add(Me.btnAddService)
         Me.Controls.Add(Me.lblServices)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmServiceSelection"
         Me.Text = "Perfect Hair Salon Services"
         Me.ResumeLayout(False)
