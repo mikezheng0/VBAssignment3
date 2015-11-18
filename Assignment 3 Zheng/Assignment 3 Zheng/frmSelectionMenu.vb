@@ -4,6 +4,8 @@
         Dim intSelectedIndex As Integer
         intSelectedIndex = lstHairdressers.SelectedIndex
         LoadTypeValues(intSelectedIndex, "Hairdresser")
+        CalculatePrice()
+        frmMain.lblPrice.Text = PriceCalcModule.decPrice.ToString("c")
         Me.Close()
         
     End Sub

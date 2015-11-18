@@ -21,7 +21,7 @@ Public Class frmMain
 
     Private Sub btnCalculateTotal_Click(sender As Object, e As EventArgs) Handles btnCalculateTotal.Click
         Dim decPrice As Decimal
-        decPrice = PriceCalcModule.CalculatePrice().ToString("c")
+        decPrice = PriceCalcModule.decPrice.ToString("c")
         lblPrice.Text = decPrice.ToString("c")
 
         lblTotalPrice.Text = (decPrice - decTypeDiscount - decVisitDiscount).ToString("c")
@@ -48,7 +48,8 @@ Public Class frmMain
             ApplyDiscountsToolStripMenuItem.Enabled = False
             ServiceSelectionToolStripMenuItem.Enabled = True
         End If
-        lblPrice.Text = CalculatePrice().ToString("c")
+        PriceCalcModule.CalculatePrice()
+        lblPrice.Text = PriceCalcModule.decPrice.ToString("c")
 
 
     End Sub

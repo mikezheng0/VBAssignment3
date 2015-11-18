@@ -27,7 +27,8 @@ Public Class frmSalonDiscount
         End Try
 
         If intTextInput >= 0 Then
-            decCalculatedVisitDiscount = PriceCalcModule.DetermineVisitDiscount(intTextInput)
+            PriceCalcModule.DetermineVisitDiscount(intTextInput)
+            decCalculatedVisitDiscount = PriceCalcModule.decVisitDiscount
             lblVisitDiscount.Text = decCalculatedVisitDiscount.ToString("c")
             frmMain.decVisitDiscount = decCalculatedVisitDiscount
 
@@ -42,7 +43,9 @@ Public Class frmSalonDiscount
 
         If intSelectedIndex >= 0 Then
             intSelectedIndex = lstClientType.SelectedIndex
-            decCalculatedTypeDiscount = PriceCalcModule.DetermineTypeDiscount(intSelectedIndex) * 0.01 * PriceCalcModule.CalculatePrice()
+            PriceCalcModule.DetermineTypeDiscount(intSelectedIndex)
+            PriceCalcModule.CalculatePrice()
+            decCalculatedTypeDiscount = PriceCalcModule.decTypeDiscount
             lblClientTypeDiscount.Text = decCalculatedTypeDiscount.ToString("c")
             frmMain.decTypeDiscount = decCalculatedTypeDiscount
         End If

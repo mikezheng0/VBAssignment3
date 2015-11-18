@@ -4,10 +4,10 @@ Public Class frmServiceSelection
 
     Private Sub btnAddService_Click(sender As Object, e As EventArgs) Handles btnAddService.Click
         Dim intSelectedIndex As Integer
-        Dim decPriceToAddToList As Decimal
         intSelectedIndex = lstServices.SelectedIndex
-
         LoadTypeValues(intSelectedIndex, "Service")
+        frmMain.lblPrice.Text = PriceCalcModule.decPrice.ToString("c")
+
         Me.Close()
     End Sub
 

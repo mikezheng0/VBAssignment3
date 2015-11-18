@@ -22,7 +22,13 @@ Module PriceCalcModule
     Dim decClientTypePrices = New Decimal() {0D, 10D, 5D, 15D}
     Dim decVisitRates = New Decimal() {0D, 5D, 10D, 15D}
 
-    Public Function DetermineVisitDiscount(ByVal intNumOfVisits As Integer) As Decimal
+    Public decPrice As Decimal = 0D
+    Public decVisitDiscount As Decimal = 0D
+    Public decTypeDiscount As Decimal = 0D
+    Public decTotalPrice As Decimal = 0D
+
+    Sub DetermineVisitDiscount(ByVal intNumOfVisits As Integer)
+        CalculatePrice()
         Dim decDiscountRate As Decimal
 
         If (intNumOfVisits <= 3) Then
@@ -35,21 +41,23 @@ Module PriceCalcModule
             decDiscountRate = decVisitRates(3)
         End If
 
-        Return decDiscountRate * 0.01 * CalculatePrice()
-    End Function
+        decVisitDiscount = decDiscountRate * 0.01 * decPrice
+    End Sub
 
-    Public Function DetermineTypeDiscount(ByVal intSelectedType As Integer) As Decimal
-        Return decClientTypePrices(intSelectedType) * 0.01 * CalculatePrice()
-    End Function
+    Sub DetermineTypeDiscount(ByVal intSelectedType As Integer)
+        If intSelectedType >= 0 Then
+            CalculatePrice()
+            decTypeDiscount = decClientTypePrices(intSelectedType) * 0.01 * decPrice
+        End If
+        
+    End Sub
 
-    Public Function CalculatePrice() As Decimal
-        Dim decTotal As Decimal = 0
+    Sub CalculatePrice()
+        decPrice = 0
         For Each intTempNumber As Integer In frmMain.lstPrice.Items
-            decTotal += intTempNumber
+            decPrice += intTempNumber
         Next
-
-        Return decTotal
-    End Function
+    End Sub
 
     Sub LoadTypeValues(ByVal intSelectedIndex As Integer, ByVal strAddType As String)
         Dim decPriceToAddToList As Decimal
@@ -64,7 +72,7 @@ Module PriceCalcModule
 
             frmMain.lstHairAndServices.Items.Add(strServiceHairdresserToAdd)
             frmMain.lstPrice.Items.Add(decPriceToAddToList.ToString("c"))
-            frmMain.lblPrice.Text = CalculatePrice().ToString("c")
+            frmMain.lblPrice.Text = PriceCalcModule.decPrice.ToString("c")
         ElseIf intSelectedIndex >= 0 And frmMain.lstHairAndServices.Items.Contains(PriceCalcModule.strServices(intSelectedIndex)) = False Then
             decPriceToAddToList = decServicesPrices(intSelectedIndex)
             strServiceHairdresserToAdd = strServices(intSelectedIndex)
@@ -73,8 +81,8 @@ Module PriceCalcModule
 
             frmMain.lstHairAndServices.Items.Add(strServiceHairdresserToAdd)
             frmMain.lstPrice.Items.Add(decPriceToAddToList.ToString("c"))
-            frmMain.lblPrice.Text = CalculatePrice().ToString("c")
+            frmMain.lblPrice.Text = PriceCalcModule.decPrice.ToString("c")
         End If
-
+        CalculatePrice()
     End Sub
 End Module
