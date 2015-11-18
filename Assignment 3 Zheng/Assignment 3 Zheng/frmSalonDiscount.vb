@@ -1,4 +1,6 @@
-﻿Public Class frmSalonDiscount
+﻿' I Mike Zheng, 000348657 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+
+Public Class frmSalonDiscount
 
     Dim decCalculatedTypeDiscount As Decimal
     Dim decCalculatedVisitDiscount As Decimal

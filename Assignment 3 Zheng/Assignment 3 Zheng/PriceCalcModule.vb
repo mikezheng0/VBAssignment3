@@ -1,20 +1,22 @@
-﻿Module PriceCalcModule
-    Public strHairDressers = New String() {"Jane Samley",
+﻿' I Mike Zheng, 000348657 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+
+Module PriceCalcModule
+    Dim strHairDressers = New String() {"Jane Samley",
                                         "Pat Johnson",
                                         "Ron Chambers",
                                         "Sue Pallon",
                                         "Laurie Renkins"}
-    Public decHairDressersPrices = New Decimal() {30D, 45D, 40D, 50D, 55D}
+    Dim decHairDressersPrices = New Decimal() {30D, 45D, 40D, 50D, 55D}
 
-    Public strServices = New String() {"Cut, Wash, Blowdry and Style",
+    Dim strServices = New String() {"Cut, Wash, Blowdry and Style",
                                     "Colour",
                                     "Highlights",
                                     "Extensions",
                                     "Up Do",
                                     "Wash, Blowdry and Style"}
-    Public decServicesPrices = New Decimal() {50D, 40D, 50D, 200D, 60D, 30D}
+    Dim decServicesPrices = New Decimal() {50D, 40D, 50D, 200D, 60D, 30D}
 
-    Public strClientTypes = New String() {"Standard Adult",
+    Dim strClientTypes = New String() {"Standard Adult",
                                           "Child (12 and under)",
                                           "Student", "Senior (over 65)"}
     Dim decClientTypePrices = New Decimal() {0D, 10D, 5D, 15D}
@@ -49,5 +51,30 @@
         Return decTotal
     End Function
 
-    'LoadTypeValues()
+    Sub LoadTypeValues(ByVal intSelectedIndex As Integer, ByVal strAddType As String)
+        Dim decPriceToAddToList As Decimal
+        Dim strServiceHairdresserToAdd As String
+        If intSelectedIndex >= 0 And strAddType = "Hairdresser" Then
+            decPriceToAddToList = decHairDressersPrices(intSelectedIndex)
+            strServiceHairdresserToAdd = strHairDressers(intSelectedIndex)
+
+            frmMain.HairDresserSelectionToolStripMenuItem.Enabled = False
+            frmMain.ServiceSelectionToolStripMenuItem.Enabled = True
+            frmMain.btnRemoveItem.Enabled = True
+
+            frmMain.lstHairAndServices.Items.Add(strServiceHairdresserToAdd)
+            frmMain.lstPrice.Items.Add(decPriceToAddToList.ToString("c"))
+            frmMain.lblPrice.Text = CalculatePrice().ToString("c")
+        ElseIf intSelectedIndex >= 0 And frmMain.lstHairAndServices.Items.Contains(PriceCalcModule.strServices(intSelectedIndex)) = False Then
+            decPriceToAddToList = decServicesPrices(intSelectedIndex)
+            strServiceHairdresserToAdd = strServices(intSelectedIndex)
+
+            frmMain.ApplyDiscountsToolStripMenuItem.Enabled = True
+
+            frmMain.lstHairAndServices.Items.Add(strServiceHairdresserToAdd)
+            frmMain.lstPrice.Items.Add(decPriceToAddToList.ToString("c"))
+            frmMain.lblPrice.Text = CalculatePrice().ToString("c")
+        End If
+
+    End Sub
 End Module

@@ -110,7 +110,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'lstHairAndServices

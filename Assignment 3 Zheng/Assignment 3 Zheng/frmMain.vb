@@ -1,4 +1,5 @@
-﻿Public Class frmMain
+﻿' I Mike Zheng, 000348657 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+Public Class frmMain
 
     Public decTypeDiscount As Decimal = 0D
     Public decVisitDiscount As Decimal = 0D
@@ -47,6 +48,8 @@
             ApplyDiscountsToolStripMenuItem.Enabled = False
             ServiceSelectionToolStripMenuItem.Enabled = True
         End If
+        lblPrice.Text = CalculatePrice().ToString("c")
+
 
     End Sub
 
@@ -72,8 +75,6 @@
         lblTotalPrice.Text = decDefaultLabelValue.ToString("c")
     End Sub
 
-
-
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         resetAll()
     End Sub
@@ -97,5 +98,9 @@
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         resetLabels()
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MessageBox.Show("I Mike Zheng, 000348657 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.")
     End Sub
 End Class
