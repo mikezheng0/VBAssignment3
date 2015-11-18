@@ -27,11 +27,75 @@
     End Sub
 
     Private Sub btnRemoveItem_Click(sender As Object, e As EventArgs) Handles btnRemoveItem.Click
-        Dim decSelectedIndex As Decimal
-        decSelectedIndex = lstHairAndServices.SelectedIndex
-        If decSelectedIndex >= 0 Then
+        Dim decSelectedIndex As Decimal = -1
+        If lstHairAndServices.SelectedIndex >= 0 Then
+            decSelectedIndex = lstHairAndServices.SelectedIndex
+        ElseIf lstPrice.SelectedIndex >= 0 Then
+            decSelectedIndex = lstPrice.SelectedIndex
+        End If
+
+        If decSelectedIndex = 0 Then
+            resetAll()
+        ElseIf decSelectedIndex > 0 Then
             lstHairAndServices.Items.RemoveAt(decSelectedIndex)
             lstPrice.Items.RemoveAt(decSelectedIndex)
+            resetLabels()
         End If
+
+        If lstHairAndServices.Items.Count = 1 Then
+            btnCalculateTotal.Enabled = False
+            ApplyDiscountsToolStripMenuItem.Enabled = False
+            ServiceSelectionToolStripMenuItem.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub resetAll()
+        lstHairAndServices.Items.Clear()
+        lstPrice.Items.Clear()
+
+        btnCalculateTotal.Enabled = False
+        btnRemoveItem.Enabled = False
+        HairDresserSelectionToolStripMenuItem.Enabled = True
+        ServiceSelectionToolStripMenuItem.Enabled = False
+        ApplyDiscountsToolStripMenuItem.Enabled = False
+
+        resetLabels()
+
+    End Sub
+
+    Private Sub resetLabels()
+        Dim decDefaultLabelValue = 0D
+        lblPrice.Text = decDefaultLabelValue.ToString("c")
+        lblClientTypeDiscount.Text = decDefaultLabelValue.ToString("c")
+        lblVisitDiscount.Text = decDefaultLabelValue.ToString("c")
+        lblTotalPrice.Text = decDefaultLabelValue.ToString("c")
+    End Sub
+
+
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        resetAll()
+    End Sub
+
+    Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
+        resetAll()
+    End Sub
+
+
+    Private Sub lstPrice_GotFocus(sender As Object, e As EventArgs) Handles lstPrice.GotFocus
+        If lstHairAndServices.SelectedIndex >= 0 Then
+            lstHairAndServices.SelectedIndex = -1
+        End If
+    End Sub
+
+    Private Sub lstHairAndServices_GotFocus(sender As Object, e As EventArgs) Handles lstHairAndServices.GotFocus
+        If lstPrice.SelectedIndex >= 0 Then
+            lstPrice.SelectedIndex = -1
+        End If
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+        resetLabels()
     End Sub
 End Class

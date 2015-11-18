@@ -2,11 +2,12 @@
 
     Private Sub btnAddHairdresser_Click(sender As Object, e As EventArgs) Handles btnAddHairdresser.Click
         Dim intSelectedIndex As Integer
-        Dim decPriceToAddToList As Decimal = PriceCalcModule.decHairDressersPrices(intSelectedIndex)
+        Dim decPriceToAddToList As Decimal
         intSelectedIndex = lstHairdressers.SelectedIndex
 
         If intSelectedIndex >= 0 Then
-            frmMain.lstHairAndServices.Items.Add(lstHairdressers.Items.Item(intSelectedIndex))
+            decPriceToAddToList = PriceCalcModule.decHairDressersPrices(intSelectedIndex)
+            frmMain.lstHairAndServices.Items.Add(PriceCalcModule.strHairDressers(intSelectedIndex))
             frmMain.lstPrice.Items.Add(decPriceToAddToList.ToString("c"))
 
             frmMain.btnRemoveItem.Enabled = True

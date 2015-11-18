@@ -1,12 +1,12 @@
 ﻿Module PriceCalcModule
-    Dim strHairDressers = New String() {"Jane Samley",
+    Public strHairDressers = New String() {"Jane Samley",
                                         "Pat Johnson",
                                         "Ron Chambers",
                                         "Sue Pallon",
                                         "Laurie Renkins"}
     Public decHairDressersPrices = New Decimal() {30D, 45D, 40D, 50D, 55D}
 
-    Dim strServices = New String() {"Cut, Wash, Blowdry and Style",
+    Public strServices = New String() {"Cut, Wash, Blowdry and Style",
                                     "Colour",
                                     "Highlights",
                                     "Extensions",
@@ -14,7 +14,9 @@
                                     "Wash, Blowdry and Style"}
     Public decServicesPrices = New Decimal() {50D, 40D, 50D, 200D, 60D, 30D}
 
-    Dim strClientTypes = New String() {"Standard Adult", "Child (12 and under)", "Student", "Senior (over 65)"}
+    Public strClientTypes = New String() {"Standard Adult",
+                                          "Child (12 and under)",
+                                          "Student", "Senior (over 65)"}
     Dim decClientTypePrices = New Decimal() {0D, 10D, 5D, 15D}
     Dim decVisitRates = New Decimal() {0D, 5D, 10D, 15D}
 

@@ -38,7 +38,7 @@ Partial Class frmMain
         Me.btnCalculateTotal = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnRemoveItem = New System.Windows.Forms.Button()
-        Me.lblPriceStatic2 = New System.Windows.Forms.Label()
+        Me.lblPriceSideStatic = New System.Windows.Forms.Label()
         Me.lblPrice = New System.Windows.Forms.Label()
         Me.lblVisitDiscount = New System.Windows.Forms.Label()
         Me.lblVisitDiscountStatic = New System.Windows.Forms.Label()
@@ -70,7 +70,7 @@ Partial Class frmMain
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(120, 26)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'OptionsToolStripMenuItem
@@ -110,7 +110,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'lstHairAndServices
@@ -183,15 +183,15 @@ Partial Class frmMain
         Me.btnRemoveItem.Text = "Removal Item"
         Me.btnRemoveItem.UseVisualStyleBackColor = True
         '
-        'lblPriceStatic2
+        'lblPriceSideStatic
         '
-        Me.lblPriceStatic2.AutoSize = True
-        Me.lblPriceStatic2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPriceStatic2.Location = New System.Drawing.Point(555, 65)
-        Me.lblPriceStatic2.Name = "lblPriceStatic2"
-        Me.lblPriceStatic2.Size = New System.Drawing.Size(48, 20)
-        Me.lblPriceStatic2.TabIndex = 8
-        Me.lblPriceStatic2.Text = "Price"
+        Me.lblPriceSideStatic.AutoSize = True
+        Me.lblPriceSideStatic.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPriceSideStatic.Location = New System.Drawing.Point(555, 65)
+        Me.lblPriceSideStatic.Name = "lblPriceSideStatic"
+        Me.lblPriceSideStatic.Size = New System.Drawing.Size(48, 20)
+        Me.lblPriceSideStatic.TabIndex = 8
+        Me.lblPriceSideStatic.Text = "Price"
         '
         'lblPrice
         '
@@ -279,7 +279,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblVisitDiscount)
         Me.Controls.Add(Me.lblVisitDiscountStatic)
         Me.Controls.Add(Me.lblPrice)
-        Me.Controls.Add(Me.lblPriceStatic2)
+        Me.Controls.Add(Me.lblPriceSideStatic)
         Me.Controls.Add(Me.btnRemoveItem)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCalculateTotal)
@@ -314,7 +314,7 @@ Partial Class frmMain
     Friend WithEvents btnCalculateTotal As System.Windows.Forms.Button
     Friend WithEvents btnReset As System.Windows.Forms.Button
     Friend WithEvents btnRemoveItem As System.Windows.Forms.Button
-    Friend WithEvents lblPriceStatic2 As System.Windows.Forms.Label
+    Friend WithEvents lblPriceSideStatic As System.Windows.Forms.Label
     Friend WithEvents lblPrice As System.Windows.Forms.Label
     Friend WithEvents lblVisitDiscount As System.Windows.Forms.Label
     Friend WithEvents lblVisitDiscountStatic As System.Windows.Forms.Label

@@ -2,14 +2,14 @@
 
     Private Sub btnAddService_Click(sender As Object, e As EventArgs) Handles btnAddService.Click
         Dim intSelectedIndex As Integer
-        Dim decPriceToAddToList As Decimal = PriceCalcModule.decServicesPrices(intSelectedIndex)
+        Dim decPriceToAddToList As Decimal
         intSelectedIndex = lstServices.SelectedIndex
-        If intSelectedIndex >= 0 Then
-            frmMain.lstHairAndServices.Items.Add(lstServices.Items.Item(intSelectedIndex))
+        If intSelectedIndex >= 0 And frmMain.lstHairAndServices.Items.Contains(PriceCalcModule.strServices(intSelectedIndex)) = False Then
+            decPriceToAddToList = PriceCalcModule.decServicesPrices(intSelectedIndex)
+            frmMain.lstHairAndServices.Items.Add(PriceCalcModule.strServices(intSelectedIndex))
             frmMain.lstPrice.Items.Add(decPriceToAddToList.ToString("c"))
 
             frmMain.ApplyDiscountsToolStripMenuItem.Enabled = True
-            frmMain.btnCalculateTotal.Enabled = True
             Me.Close()
         End If
     End Sub
