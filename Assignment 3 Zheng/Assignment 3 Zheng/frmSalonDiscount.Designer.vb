@@ -23,7 +23,7 @@ Partial Class frmSalonDiscount
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lblClientType = New System.Windows.Forms.ListBox()
+        Me.lstClientType = New System.Windows.Forms.ListBox()
         Me.txtNumberOfVisits = New System.Windows.Forms.TextBox()
         Me.lblNumOfVisitsStatic = New System.Windows.Forms.Label()
         Me.lblClientTypeStatic = New System.Windows.Forms.Label()
@@ -37,15 +37,15 @@ Partial Class frmSalonDiscount
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SuspendLayout()
         '
-        'lblClientType
+        'lstClientType
         '
-        Me.lblClientType.FormattingEnabled = True
-        Me.lblClientType.ItemHeight = 16
-        Me.lblClientType.Items.AddRange(New Object() {"Standard Adult", "Child (12 And Under)", "Student", "Senior (Over 85)"})
-        Me.lblClientType.Location = New System.Drawing.Point(12, 104)
-        Me.lblClientType.Name = "lblClientType"
-        Me.lblClientType.Size = New System.Drawing.Size(178, 116)
-        Me.lblClientType.TabIndex = 0
+        Me.lstClientType.FormattingEnabled = True
+        Me.lstClientType.ItemHeight = 16
+        Me.lstClientType.Items.AddRange(New Object() {"Standard Adult", "Child (12 And Under)", "Student", "Senior (Over 85)"})
+        Me.lstClientType.Location = New System.Drawing.Point(12, 104)
+        Me.lstClientType.Name = "lstClientType"
+        Me.lstClientType.Size = New System.Drawing.Size(178, 116)
+        Me.lstClientType.TabIndex = 0
         '
         'txtNumberOfVisits
         '
@@ -163,14 +163,14 @@ Partial Class frmSalonDiscount
         Me.Controls.Add(Me.lblClientTypeStatic)
         Me.Controls.Add(Me.lblNumOfVisitsStatic)
         Me.Controls.Add(Me.txtNumberOfVisits)
-        Me.Controls.Add(Me.lblClientType)
+        Me.Controls.Add(Me.lstClientType)
         Me.Name = "frmSalonDiscount"
         Me.Text = "Perfect Hair Salon Discounts"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblClientType As System.Windows.Forms.ListBox
+    Friend WithEvents lstClientType As System.Windows.Forms.ListBox
     Friend WithEvents txtNumberOfVisits As System.Windows.Forms.TextBox
     Friend WithEvents lblNumOfVisitsStatic As System.Windows.Forms.Label
     Friend WithEvents lblClientTypeStatic As System.Windows.Forms.Label

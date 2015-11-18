@@ -70,7 +70,7 @@ Partial Class frmMain
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(120, 26)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'OptionsToolStripMenuItem
@@ -88,12 +88,14 @@ Partial Class frmMain
         '
         'ServiceSelectionToolStripMenuItem
         '
+        Me.ServiceSelectionToolStripMenuItem.Enabled = False
         Me.ServiceSelectionToolStripMenuItem.Name = "ServiceSelectionToolStripMenuItem"
         Me.ServiceSelectionToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ServiceSelectionToolStripMenuItem.Text = "Service Selection"
         '
         'ApplyDiscountsToolStripMenuItem
         '
+        Me.ApplyDiscountsToolStripMenuItem.Enabled = False
         Me.ApplyDiscountsToolStripMenuItem.Name = "ApplyDiscountsToolStripMenuItem"
         Me.ApplyDiscountsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ApplyDiscountsToolStripMenuItem.Text = "Apply Discounts"
@@ -108,7 +110,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'lstHairAndServices
@@ -151,6 +153,7 @@ Partial Class frmMain
         '
         'btnCalculateTotal
         '
+        Me.btnCalculateTotal.Enabled = False
         Me.btnCalculateTotal.Location = New System.Drawing.Point(27, 468)
         Me.btnCalculateTotal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnCalculateTotal.Name = "btnCalculateTotal"
@@ -171,6 +174,7 @@ Partial Class frmMain
         '
         'btnRemoveItem
         '
+        Me.btnRemoveItem.Enabled = False
         Me.btnRemoveItem.Location = New System.Drawing.Point(388, 468)
         Me.btnRemoveItem.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRemoveItem.Name = "btnRemoveItem"

@@ -23,3 +23,6 @@ C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zh
 C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment_3_Zheng.frmSelectionMenu.resources
 C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment_3_Zheng.Resources.resources
 C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.vbproj.GenerateResource.Cache
+C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment_3_Zheng.frmSalonDiscount.resources
+C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment_3_Zheng.frmServiceSelection.resources
+C:\Users\mike_\Documents\GitHub\VBAssignment3\Assignment 3 Zheng\Assignment 3 Zheng\obj\Debug\Assignment 3 Zheng.vbprojResolveAssemblyReference.cache
